@@ -1,0 +1,196 @@
+/* EVA KITCHEN — Custom Final Style (Desain Elegan & Hangat) */
+
+:root {
+  --primary: #F97316;
+  --primary-light: #FDBA74;
+  --bg-light: #FFF7ED;
+  --text-main: #1F2937;
+  --text-muted: #6B7280;
+  --white: #ffffff;
+  --radius: 0.75rem;
+  --telegram-blue: #229ED9; /* Definisi warna biru Telegram */
+  --telegram-blue-dark: #1C8EC3; /* Warna sedikit lebih gelap untuk hover */
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  transition: background 0.3s, color 0.3s;
+  scroll-behavior: smooth;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #ea580c;
+  text-decoration: underline;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+header,
+footer,
+nav {
+  background-color: var(--white);
+  color: var(--text-main);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+footer {
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+input,
+textarea,
+select {
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  width: 100%;
+  font-size: 1rem;
+  color: var(--text-main);
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ea580c;
+}
+
+img {
+  border-radius: var(--radius);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+#menu-toggle {
+  font-size: 1.5rem;
+  color: var(--primary);
+  background: none;
+  border: none;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #1c1917;
+  color: #fefce8;
+}
+
+body.dark header,
+body.dark footer,
+body.dark nav {
+  background-color: #292524;
+  color: #fefce8;
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: #3f3f46;
+  color: #fefce8;
+  border-color: #52525b;
+}
+
+body.dark a {
+  color: #facc15;
+}
+
+body.dark .section-title {
+  color: #fbbf24;
+}
+
+#dark-toggle,
+#dark-toggle-mobile {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#dark-toggle:hover,
+#dark-toggle-mobile:hover {
+  transform: rotate(15deg);
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+.whatsapp-icon {
+  width: 48px;
+  height: 48px;
+}
+/* di css/style.css Anda */
+
+/* Aturan untuk Link Footer di Mode Terang */
+footer a {
+  color: var(--telegram-blue); /* Menggunakan variabel biru Telegram */
+  text-decoration: none; /* Menghilangkan underline default */
+  transition: color 0.3s ease; /* Efek transisi saat hover */
+}
+
+footer a:hover {
+  color: var(--telegram-blue-dark); /* Warna sedikit gelap saat di-hover */
+  text-decoration: underline; /* Munculkan underline saat hover */
+}
+
+/* TIDAK PERLU menambahkan blok CSS body.dark footer a untuk kasus ini */
+/* Karena Anda ingin di dark mode mengikuti yang lama */
